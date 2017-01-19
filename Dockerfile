@@ -12,6 +12,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
     intl \
     opcache \
     pdo_pgsql \
+    pdo_mysql \
     sockets \
  && apk del .build-deps
 
