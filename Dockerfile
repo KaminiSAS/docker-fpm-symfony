@@ -11,6 +11,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
     libpng-dev \
     icu-dev \
     postgresql-dev \
+    zlib-dev \
  && docker-php-ext-install \
     gd \
     intl \
@@ -18,6 +19,7 @@ RUN apk add --no-cache --virtual .persistent-deps \
     pdo_pgsql \
     pdo_mysql \
     sockets \
+    zip \
  && apk del .build-deps
 
 ADD symfony.ini /usr/local/etc/php/conf.d/
