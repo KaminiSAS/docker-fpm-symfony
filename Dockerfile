@@ -4,6 +4,9 @@ RUN apk add --no-cache --virtual .persistent-deps \
     acl \
     icu-libs \
     libpq \
+    freetype \
+    libjpeg-turbo \
+    libpng \
  && apk add --no-cache --virtual .build-deps \
     $PHPIZE_DEPS \
     freetype-dev \
