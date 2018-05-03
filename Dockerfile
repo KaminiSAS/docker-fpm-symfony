@@ -6,9 +6,13 @@ RUN apk add --no-cache --virtual .persistent-deps \
     libpq \
  && apk add --no-cache --virtual .build-deps \
     $PHPIZE_DEPS \
+    freetype-dev \
+    libjpeg-turbo-dev \
+    libpng-dev \
     icu-dev \
     postgresql-dev \
  && docker-php-ext-install \
+    gd \
     intl \
     opcache \
     pdo_pgsql \
